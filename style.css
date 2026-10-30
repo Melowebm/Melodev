@@ -1,0 +1,1246 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap');
+
+body {
+  color: white;
+  background-color: lab(0% 0 0);
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
+  font-family: 'Inter', 'Poppins', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+::selection {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+* {
+  box-sizing: border-box;
+}
+
+
+
+
+/* 1. Home Page Background */
+body.home-page::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  will-change: transform;
+  transform: translateZ(0);
+  background-image: 
+    radial-gradient(circle 250px at 20% 240px, rgba(0, 182, 255, 0.4) 0%, transparent 50%),
+    radial-gradient(circle 250px at 80% 640px, rgba(0, 145, 255, 0.4) 0%, transparent 50%);
+  background-repeat: no-repeat;
+}
+
+/* 2. Project Page Background (Main-2) */
+body.project-page::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  will-change: transform;
+  transform: translateZ(0);
+  background-image: 
+    radial-gradient(circle 250px at 80% 240px, rgba(0, 182, 255, 0.4) 0%, transparent 50%),
+    radial-gradient(circle 250px at 20% 640px, rgba(0, 145, 255, 0.4) 0%, transparent 50%);
+  background-repeat: no-repeat;
+}
+
+/* 3. Skills Page Background */
+body.skills-page::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  will-change: transform;
+  transform: translateZ(0);
+  background-image: 
+    radial-gradient(circle 450px at 20% 240px, rgba(0, 182, 255, 0.4) 0%, transparent 50%);
+  background-repeat: no-repeat;
+}
+body.about-page::before, 
+body.contact-page::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  will-change: transform;
+  transform: translateZ(0);
+  background-image: 
+    radial-gradient(circle 450px at 100% 240px, rgba(0, 182, 255, 0.4) 0%, transparent 50%),
+    radial-gradient(circle 450px at 20% 640px, rgba(0, 182, 255, 0.4) 0%, transparent 50%);
+  background-repeat: no-repeat;
+}
+
+
+
+
+
+
+/*Shared Background*/
+body.home-page .intro,
+body.project-page .intro,
+body.skills-page .intro {
+  font-family: 'Inter', 'Poppins', sans-serif;
+  background-image: linear-gradient(480deg, rgba(0,0,0,0.6), rgba(0, 0, 0, 0.6)), url('image2.jpg');
+  background-size: cover;
+  background-position: right center;
+  padding: 15px 20px 15px 10px;
+  margin: 10px 0;
+  height: 150px;
+  margin-top: 0;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+
+body.home-page, 
+body.project-page, 
+body.skills-page,
+body.about-page,  
+body.contact-page {
+  font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+
+body.home-page .navigation-bar,
+body.project-page .navigation-bar,
+body.skills-page .navigation-bar,
+body.about-page .navigation-bar,
+body.contact-page .navigation-bar {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  margin-left: -5px;
+  margin-right: -5px;
+  margin-top: -5px;
+}
+
+
+body.home-page .navigation-bar a, 
+body.project-page .navigation-bar a, 
+body.skills-page .navigation-bar a, 
+body.about-page .navigation-bar a, 
+body.contact-page .navigation-bar a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  padding: 5px 10px;
+  font-size: 85%; 
+  transition: 0.3s ease;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+body.home-page .navigation-bar a:hover,
+body.project-page .navigation-bar a:hover,
+body.skills-page .navigation-bar a:hover,
+body.about-page .navigation-bar a:hover,
+body.contact-page .navigation-bar a:hover {
+  background-color: darkblue;
+  color: white;
+}
+
+
+body.project-page .intro,
+body.skills-page .intro, 
+body.about-page .intro,  
+body.contact-page .intro {
+  text-align: center;
+}
+
+
+body.home-page .intro h1,
+body.project-page .intro h1,
+body.skills-page .intro h1 {
+  font-size: 265%;
+  animation: fadeIn 0.8s ease-out forwards;
+  opacity: 0;
+  margin-top: -100px;
+}
+
+body.contact-page .intro h1 {
+  font-size: 265%;
+  animation: fadeIn 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+
+body.home-page .intro p,
+body.skills-page .intro p {
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 0.4s;
+  opacity: 0;
+  margin-top: -30px;
+  font-size: 70%;
+  font-weight: 500;
+}
+body.contact-page .intro p {
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 0.4s;
+  opacity: 0;
+  font-size: 70%;
+  font-weight: 500;
+}
+
+
+
+
+
+
+/*Home Content*/
+body.home-page .navigation-bar a:first-child {
+  background: linear-gradient(480deg, skyblue, blue);
+  pointer-events: none;
+}
+body.home-page .profile {
+  justify-self: right;
+}
+body.home-page .profile img {
+  border-radius: 50%;
+}
+body.home-page .social-icon {
+  display: flex;
+  gap: 5px;
+  margin-top: -10px;
+}
+body.home-page .social-icon a {
+  text-decoration: none;
+}
+body.home-page .social-icon .fa-youtube, .fa-github, .fa-whatsapp {
+  border-radius: 50%;
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 0.6s;
+  opacity: 0;
+  color: hwb(0 100% 0%);
+  margin: 5px;
+}
+body.home-page .melodev {
+  color: hwb(240 49% 1%);
+  font-weight: 700;
+}
+
+
+body.project-page .navigation-bar a:nth-child(2),
+body.skills-page .navigation-bar a:nth-child(3),
+body.about-page .navigation-bar a:nth-child(5),
+body.contact-page .navigation-bar a:nth-child(6) {
+  background: linear-gradient(480deg, skyblue, blue);
+  pointer-events: none;
+}
+
+
+body.project-page .details, 
+body.skills-page .details {
+  background-color: darkblue;
+  border-radius: 5px;
+  width: 95%;
+  padding: 5px;
+  height: 25px;
+  margin: auto;
+  text-align: center;
+}
+body.project-page .details a,
+body.skills-page .details a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: white;
+}
+
+
+body.skills-page .fa-html5, .fa-css3-alt, .fa-js,
+body.project-page .fa-question {
+  margin-top: 25px;
+  font-size: 450%;
+  color: hwb(240 30% 0%);
+}
+
+
+
+body.project-page .section-1 h3, 
+body.project-page .section-2 h3, 
+body.project-page .section-3 h3, 
+body.project-page .section-4 h3, 
+body.project-page .section-5 h3, 
+body.project-page .section-6 h3, 
+body.project-page .section-7 h3,
+body.project-page .section-8 h3 {
+  font-size: 150%;
+}
+body.project-page .section-1 p,
+body.project-page .section-2 p,
+body.project-page .section-3 p,
+body.project-page .section-4 p,
+body.project-page .section-5 p,
+body.project-page .section-6 p,
+body.project-page .section-7 p,
+body.project-page .section-8 p {
+  font-size: 85%;
+}
+
+
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
+
+
+
+/*Home.Page Property*/
+body.home-page .main {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  gap: 90px;
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+body.home-page .main-content {
+  flex-wrap: wrap;
+  margin-bottom: 0;
+  width: 90%;
+  max-width: 500px;
+}
+body.home-page .main-content h1{
+  animation: fadeSlide 0.8s ease-in forwards;
+  opacity: 0;
+  font-size: 250%;
+}
+body.home-page .main-content p {
+  font-size: 85%;
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 0.7s;
+  opacity: 0;
+}
+body.home-page .timeLine {
+  width: 90%;
+  max-width: 500px;
+  margin-top: -10px;
+  flex-wrap: wrap;
+}
+body.home-page .timeLine h3 {
+  animation: fadeSlide 0.8s ease-out forwards;
+  animation-delay: 0.9s;
+  opacity: 0;
+  font-size: 250%;
+}
+body.home-page .timeLine p {
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 1.0s;
+  margin-top: -15px;
+  opacity: 0;
+  font-size: 85%;
+}
+body.home-page .view {
+  text-align: center;
+  width: 90%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 500px;
+  flex-wrap: wrap;
+}
+body.home-page .view h3 {
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 1.3s;
+  opacity: 0;
+  font-size: 250%;
+}
+body.home-page .view p {
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 1.4s;
+  opacity: 0;
+  font-size: 85%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*Project Page Property*/
+body.project-page .intro h1 {
+  text-align: center;
+  margin-top: -5px;
+  font-size: 265%;
+  animation: fadeIn 0.8s ease-out forwards;
+  opacity: 0;
+}
+body.project-page .intro p {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  margin-top: -15px;
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 0.4s;
+  opacity: 0;
+  font-size: 70%;
+  font-weight: 500;
+}
+
+body.project-page .main {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+body.project-page .card-1 {
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+  position: relative;
+  background-color: hwb(240 0% 85%);
+  padding: 10px;
+  font-size: 85%;
+  width: 300px;
+  margin-top: 50px;
+  min-height: 50%;
+  max-height: 600px;
+  border-radius: 15px;
+  border: 1px solid hwb(240 0% 73%);
+}
+body.project-page .fa-globe {
+  margin-top: 25px;
+  font-size: 450%;
+  color: hwb(240 30% 0%);
+}
+body.project-page .icon {
+  text-align: center;
+}
+body.project-page .card-1 h3 {
+  font-size: 150%;
+}
+body.project-page .card-1 p {
+  font-size: 85%;
+}
+body.project-page .details {
+  background-color: darkblue;
+  border-radius: 5px;
+  width: 95%;
+  padding: 5px;
+  height: 25px;
+  margin: auto;
+  text-align: center;
+}
+body.project-page .details a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: white;
+}
+body.project-page .cite {
+  color: gray;
+  font-size: 80%;
+}
+body.project-page .card-2 {
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 0.6s;
+  opacity: 0;
+  position: relative;
+  background-color: hwb(240 0% 85%);
+  padding: 10px;
+  font-size: 85%;
+  margin-top: 50px;
+  width: 300px;
+  min-height: 50%;
+  max-height: 600px;
+  border-radius: 15px;
+  border: 1px solid hwb(240 0% 73%);
+}
+body.project-page .card-2 h3 {
+  font-size: 150%;
+}
+body.project-page .card-2 p {
+  font-size: 85%;
+}
+body.project-page .card-3 {
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 0.7s;
+  opacity: 0;
+  position: relative;
+  background-color: hwb(240 0% 85%);
+  padding: 10px;
+  font-size: 85%;
+  margin-top: 50px;
+  width: 300px;
+  min-height: 50%;
+  max-height: 600px;
+  border-radius: 15px;
+  border: 1px solid hwb(240 0% 73%);
+}
+body.project-page .card-3 h3 {
+  font-size: 150%;
+}
+body.project-page .card-3 p {
+  font-size: 85%;
+}
+
+
+
+
+/*Section 2*/
+body.project-page .details-2 {
+  background-color: darkblue;
+  border-radius: 5px;
+  width: 95%;
+  padding: 5px;
+  height: 25px;
+  margin: auto;
+  text-align: center;
+}
+body.project-page .details-2 a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: white;
+}
+body.project-page .title {
+  margin-top: 50px;
+  text-align: center;
+}
+body.project-page .main-2 {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+body.project-page .section-1 {
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 0.8s;
+  opacity: 0;
+  position: relative;
+  background-color: hwb(240 0% 85%);
+  padding: 10px;
+  font-size: 85%;
+  margin-top: 50px;
+  width: 300px;
+  min-height: 50%;
+  max-height: 300px;
+  border-radius: 15px;
+  border: 1px solid hwb(240 0% 73%);
+}
+body.project-page .section-2 {
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 0.8s;
+  opacity: 0;
+  position: relative;
+  background-color: hwb(240 0% 85%);
+  padding: 10px;
+  font-size: 85%;
+  margin-top: 50px;
+  width: 300px;
+  min-height: 50%;
+  max-height: 300px;
+  border-radius: 15px;
+  border: 1px solid hwb(240 0% 73%);
+}
+body.project-page .section-3 {
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 0.9s;
+  opacity: 0;
+  position: relative;
+  background-color: hwb(240 0% 85%);
+  padding: 10px;
+  font-size: 85%;
+  margin-top: 50px;
+  width: 300px;
+  min-height: 50%;
+  max-height: 300px;
+  border-radius: 15px;
+  border: 1px solid hwb(240 0% 73%);
+}
+body.project-page .section-4 {
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 1.0s;
+  opacity: 0;
+  position: relative;
+  background-color: hwb(240 0% 85%);
+  padding: 10px;
+  font-size: 85%;
+  margin-top: 50px;
+  width: 300px;
+  min-height: 50%;
+  max-height: 300px;
+  border-radius: 15px;
+  border: 1px solid hwb(240 0% 73%);
+}
+body.project-page .section-5 {
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 1.3s;
+  opacity: 0;
+  position: relative;
+  background-color: hwb(240 0% 85%);
+  padding: 10px;
+  font-size: 85%;
+  margin-top: 40px;
+  width: 300px;
+  min-height: 50%;
+  max-height: 300px;
+  border-radius: 15px;
+  border: 1px solid hwb(240 0% 73%);
+}
+
+body.project-page .section-6 {
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 1.3s;
+  opacity: 0;
+  position: relative;
+  background-color: hwb(240 0% 85%);
+  padding: 10px;
+  font-size: 85%;
+  margin-top: 40px;
+  width: 300px;
+  min-height: 50%;
+  max-height: 300px;
+  border-radius: 15px;
+  border: 1px solid hwb(240 0% 73%);
+}
+body.project-page .section-7 {
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 1.3s;
+  opacity: 0;
+  position: relative;
+  background-color: hwb(240 0% 85%);
+  padding: 10px;
+  font-size: 85%;
+  margin-top: 40px;
+  width: 300px;
+  min-height: 50%;
+  max-height: 300px;
+  border-radius: 15px;
+  border: 1px solid hwb(240 0% 73%);
+}
+body.project-page .section-8 {
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 1.3s;
+  opacity: 0;
+  position: relative;
+  background-color: hwb(240 0% 85%);
+  padding: 10px;
+  font-size: 85%;
+  margin-top: 40px;
+  width: 300px;
+  min-height: 50%;
+  max-height: 300px;
+  border-radius: 15px;
+  border: 1px solid hwb(240 0% 73%);
+}
+
+
+
+
+
+
+
+
+/*Skills & Expertise Perperty*/
+body.skills-page .intro h1 {
+  font-size: 165%;
+  animation: fadeIn 0.8s ease-out forwards;
+  opacity: 0;
+  margin-top: -5px;
+}
+@media (min-width: 478px) {
+  body.skills-page .intro h1,
+  body.contact-page .intro h1 {
+    font-size: 265%;
+  }
+}
+body.skills-page .intro p {
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 0.4s;
+  opacity: 0;
+  margin: -10px auto 0 auto;
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
+  font-size: 70%;
+  font-weight: 500;
+}
+body.skills-page .main {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 50px;
+}
+body.skills-page .learned-1 {
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+  position: relative;
+  background-color: hwb(240 0% 85%);
+  padding: 10px;
+  font-size: 85%;
+  margin-top: 40px;
+  width: 300px;
+  min-height: 40%;
+  max-height: 250px;
+  border-radius: 15px;
+  border: 1px solid hwb(240 0% 73%);
+}
+body.skills-page .icon {
+  text-align: center;
+}
+body.skills-page .details {
+  background-color: darkblue;
+  border-radius: 5px;
+  width: 95%;
+  padding: 5px;
+  height: 25px;
+  margin: auto;
+  text-align: center;
+}
+body.skills-page .details a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: white;
+}
+body.skills-page .learned-2 {
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 0.7s;
+  opacity: 0;
+  position: relative;
+  background-color: hwb(240 0% 85%);
+  padding: 10px;
+  font-size: 85%;
+  margin-top: 40px;
+  width: 300px;
+  min-height: 40%;
+  max-height: 250px;
+  border-radius: 15px;
+  border: 1px solid hwb(240 0% 73%);
+}
+body.skills-page .learned-3 {
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 0.9s;
+  opacity: 0;
+  position: relative;
+  background-color: hwb(240 0% 85%);
+  padding: 10px;
+  font-size: 85%;
+  margin-top: 40px;
+  width: 300px;
+  min-height: 40%;
+  max-height: 250px;
+  border-radius: 15px;
+  border: 1px solid hwb(240 0% 73%);
+}
+body.skills-page .info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+body.skills-page .bar {
+  height: 10px;
+  background-color: hwb(239 7% 67%);
+  overflow: hidden;
+  width: 285px;
+  margin-bottom: 8px;
+  border-radius: 999px;
+}
+body.skills-page .progress {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(40deg, skyblue, blue, darkblue);
+  animation: fill 2s forwards;
+}
+@keyframes fill {
+  to {
+    width: var(--width);
+  }
+}
+
+
+
+
+
+
+
+
+
+/*About Page Property*/
+body.about-page .intro h1 {
+  font-size: 265%;
+  animation: fadeIn 0.8s ease-out forwards;
+  opacity: 0;
+}
+body.about-page .intro p {
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 0.4s;
+  opacity: 0;
+  color: hwb(198 15% 33%);
+  margin-top: -20px;
+  font-size: 70%;
+  font-weight: 500;
+}
+body.about-page h3, 
+body.contact-page h3 {
+  display: none;
+}
+
+@media (min-width: 748px) {
+  body.about-page .navigation-bar, 
+  body.contact-page .navigation-bar {
+    justify-content: right;
+    margin-right: 250px;
+    font-size: 150%;
+  }
+  body.about-page h3,
+  body.contact-page h3 {
+    display: block;
+    color: white;
+    margin: 0;
+    font-size: 130%;
+    margin-right: auto;
+    margin-left: 50px;
+  }
+}
+
+@media (min-width: 748px) {
+  body.about-page::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+    will-change: transform;
+    transform: translateZ(0);
+    background-image: 
+      radial-gradient(circle 450px at 80% 240px, rgba(0, 182, 255, 0.4) 0%, transparent 50%),
+      radial-gradient(circle 450px at 20% 240px, rgba(0, 182, 255, 0.4) 0%, transparent 50%),
+      radial-gradient(circle 450px at 70% 640px, rgba(0, 182, 255, 0.4) 0%, transparent 50%);
+    background-repeat: no-repeat;
+  }
+}
+
+body.about-page .profile {
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex; 
+  flex-wrap: wrap;
+  margin: 15px;
+  justify-content: center;
+  min-width: 85%;
+  max-width: 600px;
+  box-shadow: inset 0 0 1px white;
+  border-radius: 15px;
+  padding: 10px;
+}
+body.about-page .profile img {
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 0.4s;
+  opacity: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 15px skyblue;
+  border: 3px solid black;
+}
+body.about-page .profile p {
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 0.6s;
+  opacity: 0;
+  font-size: 85%;
+  min-width: auto;
+  text-align: center;
+}
+
+@media (min-width: 748px) {
+  body.about-page .main {
+    background-color: rgba(0, 0, 0, 0.10196078431372549); 
+    min-width: 65%;
+    max-width: 600px;
+    margin: auto;
+    min-height: 70%;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 40px;
+  }
+ body.about-page .main::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: black;
+    pointer-events: none;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 50%, black 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 50%, black 90%, transparent);
+    z-index: 0;
+  }
+
+body.about-page .main > * {
+    position: relative;
+    z-index: 1;
+  }
+
+body.about-page .profile {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    min-width: 85%;
+    gap: 32px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 1px white;
+    padding: 20px;
+    max-width: 600px;
+  }
+
+body.about-page .profile p {
+    padding-top: 15px;
+    text-align: left;
+    margin: 0;
+  }
+}
+body.about-page .info-card {
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 1.3s;
+  opacity: 0;
+  position: relative;
+  background-color: hwb(240 0% 85%);
+  padding: 10px;
+  font-size: 85%;
+  width: 300px;
+  min-height: 50%;
+  max-height: 300px;
+  border-radius: 15px;
+  border: 1px solid hwb(240 0% 73%);
+}
+body.about-page .container {
+  flex-wrap: wrap;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+body.about-page .icon {
+  font-size: 450%;
+  text-align: center;
+}
+@media (min-width: 748px) {
+  body.about-page .container {
+    animation: fadeIn 0.8s ease-out forwards;
+    animation-delay: 1.3s;
+    opacity: 0;
+    width: 600px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: auto;
+  }
+  body.about-page .icon {
+    font-size: 100%;
+    text-align: left;
+  }
+  body.about-page .container p {
+    font-size: 75%;
+  }
+} body.about-page .info-card {
+  box-shadow: 0 0 5px skyblue;
+  border-radius: 15px;
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 1.3s;
+  opacity: 0;
+}
+
+
+
+
+
+
+
+/*Contact Property*/
+body.contact-page .intro h1 {
+  font-size: 165%;
+  animation: fadeIn 0.8s ease-out forwards;
+  opacity: 0;
+}
+body.contact-page .intro p {
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 0.4s;
+  opacity: 0;
+  margin: -10px auto 0 auto;
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
+  margin-top: -10px;
+  font-size: 70%;
+  font-weight: 500;
+}
+body.contact-page .info-card {
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 1.3s;
+  opacity: 0;
+  position: relative;
+  background-color: hwb(240 0% 85%);
+  padding: 10px;
+  font-size: 85%;
+  width: 300px;
+  min-height: 50%;
+  max-height: 300px;
+  box-shadow: 0 0 5px skyblue;
+  border-radius: 15px;
+  border: 1px solid hwb(240 0% 73%);
+}
+
+@media (min-width: 748px) {
+body.contact-page .info-card-form {
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 1.3s;
+  opacity: 0;
+  position: relative;
+  background-color: hwb(240 0% 85%);
+  padding: 10px;
+  font-size: 85%;
+  width: 200px;
+  min-height: 50%;
+  max-height: 300px;
+  border-radius: 15px;
+  border: 1px solid hwb(240 0% 73%);
+ }
+} 
+body.contact-page .info-card {
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 1.3s;
+  opacity: 0;
+  position: relative;
+  background-color: hwb(240 0% 85%);
+  padding: 10px;
+  font-size: 85%;
+  width: 300px;
+  max-height: 110px;
+  border-radius: 15px;
+  border: 1px solid hwb(240 0% 73%);
+}
+
+
+
+body.contact-page .info-card-form {
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 1.4s;
+  opacity: 0;
+  position: relative;
+  background-color: hwb(240 0% 85%);
+  padding: 10px;
+  font-size: 85%;
+  width: 300px;
+  max-height: 450px;
+  box-shadow: 0 0 5px skyblue;
+  border-radius: 15px;
+  border: 1px solid hwb(240 0% 73%);
+}
+
+
+
+
+body.contact-page .container {
+  flex-wrap: wrap;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  justify-content: center;
+}
+body.contact-page .info-card a {
+  text-decoration: none;
+  color: gray;
+  font-size: 85%;
+}
+
+body.contact-page form {
+  padding: 10px;
+}
+
+
+body.contact-page .info-card-form textarea {
+  background-color: hwb(0 24% 76%);
+  color: white;
+  height: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 5px;
+  margin: 10px auto;
+  display: block;
+  border: none;
+  width: 100%;
+  padding: 5px;
+  height: 100px;
+  caret-color: blue;
+  box-shadow: inset 0 0 2px skyblue;
+}
+body.contact-page .info-card-form input[type="text"], 
+body.contact-page .info-card-form input[type="email"] {
+  background-color: hwb(0 24% 76%);
+  color: white;
+  height: 30px;
+  border-radius: 5px;
+  margin: 10px auto;
+  display: block;
+  border: none;
+  padding: 5px;
+  width: 100%;
+  caret-color: blue;
+  box-shadow: inset 0 0 2px skyblue;
+}
+body.contact-page .info-card-form input[type="text"]:focus,
+body.contact-page .info-card-form input[type="email"]:focus,
+body.contact-page .info-card-form textarea:focus {
+  outline: none;
+  border: 2px solid skyblue;
+}
+
+
+body.contact-page .info-card-form button {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  background: linear-gradient(480deg, skyblue, blue, darkblue);
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-weight: 700;
+  color: white;
+}
+body.contact-page .info-card-form button:hover {
+  opacity: 0.8;
+}
+
+
+
+
+@media (min-width: 748px) {
+  body.contact-page .info-card-form input[type="text"] {
+    height: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+@media (min-width: 748px) {
+  body.contact-page .info-card,
+  body.contact-page .info-card-form {
+    width: auto;
+    max-width: 320px;
+    flex: 1;
+  }
+}
+
+
+
+
+
+@media (min-width: 748px) {
+  body.contact-page .container {
+    animation: fadeIn 0.8s ease-out forwards;
+    animation-delay: 1.3s;
+    opacity: 0;
+    width: 600px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+  body.contact-page .brands-icon {
+    display: flex;
+    font-size: 100%;
+    text-align: left;
+  }
+  body.contact-page .container p {
+    font-size: 75%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+  position: absolute;
+  border-top: 1px solid hwb(0 29% 71%);
+  background-color: black;
+  font-size: 85%;
+  color: lightgray;
+  margin-top: 5px;
+  padding-bottom: 0;
+  width: 100%;
+  text-align: center;
+}
