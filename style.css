@@ -1221,9 +1221,22 @@ body.contact-page .info-card-form button:hover {
   }
 }
 
-
-
-
+body.about-page .journey {
+  margin: 10px;
+  margin-bottom: 40px;
+}
+body.about-page .journey h1 {
+  font-size: 250%;
+}
+body.about-page .journey h4 {
+  margin-top: -20px;
+  font-size: 90%;
+  font-style: italic;
+  color: hwb(0 65% 35%);
+}
+body.about-page .journey dt {
+  font-weight: bold;
+}
 
 
 
